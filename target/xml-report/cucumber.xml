@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="0.298">
-    <testcase classname="US001 Register User" name="TC01 Register Page" time="0.074">
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="0.59">
+    <testcase classname="US002 Login User With Correct Email and Password" name="TC01 Kayit sayfasi" time="0.097">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[When kullanici tarayiciyi baslatir..........................................undefined
 Then kullanici anasayfaya gider.............................................skipped
 Then sayfanin gorunur oldugunu test eder....................................skipped
 Then kullanici SingUp-Login butonuna tiklar.................................skipped
-And kullanici New User Signup! yazisinin gorunurlugunu test eder............skipped
+Then kullanici Login to your account yazisinin gorunurlugunu test eder......skipped
 ]]>
         </failure>
     </testcase>
-    <testcase classname="US001 Register User" name="TC02" time="0.002">
+    <testcase classname="US002 Login User With Correct Email and Password" name="TC02 Dogru email ve password ile giris yapma" time="0.003">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[When kullanici isim ve mail adresini girer..................................undefined
-Then Singup butonuna tiklar.................................................skipped
-Then acilan sayfada ENTER ACCOUNT INFORMATION yazisinin gorunurlugunu test eder.skipped
-Then kullanici birinci bolum icin Email, Password, Date of birth kisimlarini doldurur.skipped
-Then kullanici Sign up for our newsletter! checkbox' ini secer..............skipped
-Then kullanici Receive special offers from our partners! checkbox' ini secer.skipped
-Then kullanici ikinci bolum icin gerekli kisimlari doldurur.................skipped
-Then kullnici Creat Account butonuna tiklar.................................skipped
-And kullanici hesabin olustugunu dogrular...................................skipped
+            <![CDATA[When kullanici dogru "email" ve "password" girer............................undefined
+Then kullanici Login butanuna tiklar........................................skipped
+Then Logged in as username yazisinin gorunur oldugunu test eder.............skipped
 ]]>
         </failure>
     </testcase>
-    <testcase classname="US001 Register User" name="TC03" time="0.004">
+    <testcase classname="US002 Login User With Correct Email and Password" name="TC03 Hesap silme" time="0.002">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[When kullanici Continue butonuna basar......................................undefined
-Then sağ ustte olan Logged in as username yazisini gorur....................skipped
-Then kullanici Delete Account butonuna tiklar...............................skipped
-And kullanici ACCOUNT DELETED! yazisini gorur ve Continue butonuna tiklar...skipped
+            <![CDATA[When kullanici Delete Account butonuna tiklar...............................undefined
+And kullanici hesabin silindigini test eder.................................skipped
 ]]>
         </failure>
     </testcase>

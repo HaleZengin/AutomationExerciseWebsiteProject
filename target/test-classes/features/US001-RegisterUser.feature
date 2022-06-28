@@ -2,14 +2,14 @@
 Feature: US001 Register User
 
 
-  Scenario: TC01 Register Page
+  Scenario: TC01 Kayit sayfasi
     When kullanici tarayiciyi baslatir
     Then kullanici anasayfaya gider
     Then sayfanin gorunur oldugunu test eder
     Then kullanici SingUp-Login butonuna tiklar
     And  kullanici New User Signup! yazisinin gorunurlugunu test eder
 
-  Scenario: TC02
+  Scenario: TC02 Ilk kayit
       When kullanici isim ve mail adresini girer
       Then Singup butonuna tiklar
       Then acilan sayfada ENTER ACCOUNT INFORMATION yazisinin gorunurlugunu test eder
@@ -21,7 +21,7 @@ Feature: US001 Register User
       And  kullanici hesabin olustugunu dogrular
 
 
-  Scenario: TC03
+  Scenario: TC03 Hesap silme
     When kullanici Continue butonuna basar
     Then sag ustte olan Logged in as username yazisini gorur
     Then kullanici Delete Account butonuna tiklar

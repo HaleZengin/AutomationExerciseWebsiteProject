@@ -1,5 +1,4 @@
-@US2
-Feature: US002 Login User With Correct Email and Password
+Feature: US004 Logout User
 
   Scenario: TC01 Kayit sayfasi
     When kullanici tarayiciyi baslatir
@@ -13,7 +12,7 @@ Feature: US002 Login User With Correct Email and Password
     Then kullanici Login butanuna tiklar
     Then Logged in as username yazisinin gorunur oldugunu test eder
 
-  Scenario: TC03 Hesap silme
-    When kullanici Delete Account butonuna tiklar
-    And  kullanici hesabin silindigini test eder
+  Scenario: TC03 Giris yaptigi sayfadan cikma
+    When kullanici Logout butonuna tiklar
+    Then kullanici login sayfasina dondugunu test eder
 
