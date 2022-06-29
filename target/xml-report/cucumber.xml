@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="0.59">
-    <testcase classname="US002 Login User With Correct Email and Password" name="TC01 Kayit sayfasi" time="0.097">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[When kullanici tarayiciyi baslatir..........................................undefined
-Then kullanici anasayfaya gider.............................................skipped
-Then sayfanin gorunur oldugunu test eder....................................skipped
-Then kullanici SingUp-Login butonuna tiklar.................................skipped
-Then kullanici Login to your account yazisinin gorunurlugunu test eder......skipped
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="8.79">
+    <testcase classname="US006 Contact Us Form" name="TC01 Contact Us butonu" time="7.968">
+        <system-out>
+            <![CDATA[When kullanici tarayiciyi baslatir..........................................passed
+Then kullanici anasayfaya gider.............................................passed
+Then sayfanin gorunur oldugunu test eder....................................passed
+Then kullanici Contact Us butonuna tiklar...................................passed
+Then kullanici GET IN TOUCH yazisini gorur..................................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="US002 Login User With Correct Email and Password" name="TC02 Dogru email ve password ile giris yapma" time="0.003">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[When kullanici dogru "email" ve "password" girer............................undefined
-Then kullanici Login butanuna tiklar........................................skipped
-Then Logged in as username yazisinin gorunur oldugunu test eder.............skipped
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="US002 Login User With Correct Email and Password" name="TC03 Hesap silme" time="0.002">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[When kullanici Delete Account butonuna tiklar...............................undefined
-And kullanici hesabin silindigini test eder.................................skipped
+    <testcase classname="US006 Contact Us Form" name="TC02 Contact Us icin detaylarin doldurulmasi" time="0.608">
+        <failure message="unexpected alert open: {Alert text : Press OK to proceed!}&#10;  (Session info: chrome=102.0.5005.115): Press OK to proceed!&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'HALEZENGIN', ip: '192.168.1.36', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a14355b6b3386447c71528f108b3a90d, maximizeCurrentWindow {}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52640}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52640/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a14355b6b3386447c71528f108b3a90d" type="org.openqa.selenium.UnhandledAlertException">
+            <![CDATA[When kullanici name, email, subject ve message kisimlarini doldurur.........passed
+Then kullanici dosyayi yukler...............................................passed
+Then kullanici Submit butonuna tiklar.......................................passed
+Then cikan alert' te OK tusuna basar........................................failed
+Then Success! Your details have been submitted successfully. yazisini gorur.skipped
+And kullanici Home butonuna basar...........................................skipped
+And kullanici anasayfaya gittigini test eder................................skipped
+And kullanici sayfayi kapatir...............................................skipped
+
+StackTrace:
+org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Press OK to proceed!}
+  (Session info: chrome=102.0.5005.115): Press OK to proceed!
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'HALEZENGIN', ip: '192.168.1.36', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a14355b6b3386447c71528f108b3a90d, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52640}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52640/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a14355b6b3386447c71528f108b3a90d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:969)
+	at utilities.Driver.getDriver(Driver.java:51)
+	at stepDefinitions.FillDetailsStepDefinition.cikan_alert_te_ok_tusuna_basar(FillDetailsStepDefinition.java:83)
+	at ✽.cikan alert' te OK tusuna basar(file:///C:/Users/Asus/IdeaProjects/AutomationExerciseWebsiteProject/src/test/resources/features/US006-ContactUsForm.feature:15)
 ]]>
         </failure>
     </testcase>

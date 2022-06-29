@@ -26,6 +26,13 @@ public class MainPage {
     @FindBy (xpath = "//b[contains (text(),'Enter Account Information')]")
     public WebElement createAccountPageVerification;
 
+    @FindBy(xpath = "//a[.=' Contact us']")
+    public WebElement contactUsButonu;
+
+    @FindBy(xpath = "//h2[.='Get In Touch']")
+    public WebElement getInTouchText;
+
+
 
 
 }

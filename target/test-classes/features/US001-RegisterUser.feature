@@ -26,6 +26,7 @@ Feature: US001 Register User
     Then sag ustte olan Logged in as username yazisini gorur
     Then kullanici Delete Account butonuna tiklar
     And  kullanici hesabin silindigini test eder
+    And  kullanici sayfayi kapatir
 
 
 

@@ -1,14 +1,20 @@
 package stepDefinitions;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import pages.FillDetailsPage;
+import utilities.Driver;
 
 public class FillDetailsStepDefinition {
 
     FillDetailsPage fillDetailsPage = new FillDetailsPage();
+
+    Faker faker = new Faker();
 
     @Then("kullanici birinci bolum icin Email, Password, Date of birth kisimlarini doldurur")
     public void kullanici_birinci_bolum_icin_email_password_date_of_birth_kisimlarini_doldurur() {
@@ -54,4 +60,45 @@ public class FillDetailsStepDefinition {
         Assert.assertTrue(fillDetailsPage.accountCreatedText.isDisplayed());
     }
 
+    //US006
+
+    @When("kullanici name, email, subject ve message kisimlarini doldurur")
+    public void kullanici_name_email_subject_ve_message_kisimlarini_doldurur() {
+        fillDetailsPage.name.sendKeys(faker.name().firstName());
+        fillDetailsPage.email.sendKeys(faker.internet().emailAddress());
+        fillDetailsPage.subject.sendKeys(faker.funnyName().name());
+        fillDetailsPage.message.sendKeys(faker.internet().avatar());
+    }
+    @Then("kullanici dosyayi yukler")
+    public void kullanici_dosyayi_yukler() {
+
+    }
+    @Then("kullanici Submit butonuna tiklar")
+    public void kullanici_submit_butonuna_tiklar() {
+        fillDetailsPage.submit.click();
+
+    }
+    @Then("cikan alert te OK tusuna basar")
+    public void cikan_alert_te_ok_tusuna_basar() {
+        Driver.getDriver().switchTo().alert().accept();
+    }
+    @Then("Success! Your details have been submitted successfully. yazisini gorur")
+    public void success_your_details_have_been_submitted_successfully_yazisini_gorur() {
+        Assert.assertTrue(fillDetailsPage.successText.isDisplayed());
+    }
+    @Then("kullanici Home butonuna basar")
+    public void kullanici_home_butonuna_basar() {
+        fillDetailsPage.home.click();
+    }
+    @Then("kullanici anasayfaya gittigini test eder")
+    public void kullanici_anasayfaya_gittigini_test_eder() {
+        Assert.assertEquals("https://www.automationexercise.com/",Driver.getDriver().getTitle() );
+
+    }
+
+
+    @And("{int} saniye bekler")
+    public void saniyeBekler(int saniye) throws InterruptedException {
+        Thread.sleep(saniye*1000);
+    }
 }

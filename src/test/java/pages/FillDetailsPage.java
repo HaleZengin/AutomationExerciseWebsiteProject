@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.security.cert.X509Certificate;
+
 public class FillDetailsPage {
 
     public FillDetailsPage(){
@@ -65,5 +67,33 @@ public class FillDetailsPage {
 
     @FindBy(xpath = "//*[text()='Account Created!']")
     public WebElement accountCreatedText;
+
+    //US006
+
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement name;
+
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement email;
+
+    @FindBy(xpath = "//input[@name='subject']")
+    public WebElement subject;
+
+    @FindBy(xpath = "//textarea[@name='message']")
+    public WebElement message;
+
+    @FindBy(xpath = "//input[@name='upload_file']")
+    public WebElement uploadFile;
+
+    @FindBy(xpath = "//input[@name='submit']")
+    public WebElement submit;
+
+    @FindBy(xpath = "(//div[.='Success! Your details have been submitted successfully.'])[1]")
+    public WebElement successText;
+
+    @FindBy(xpath = "//span[.=' Home']")
+    public WebElement home;
+
+
 
 }

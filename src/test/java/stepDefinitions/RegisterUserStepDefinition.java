@@ -106,4 +106,26 @@ public class RegisterUserStepDefinition {
     public void kullaniciEmailAddressAlreadyExistYazisiniGorur() {
         Assert.assertTrue(loginPage.existEmail.isDisplayed());
     }
+
+    @And("kullanici sayfayi kapatir")
+    public void kullaniciSayfayiKapatir() {
+        Driver.closeDriver();
+
+    }
+
+    //US006
+
+    @Then("kullanici Contact Us butonuna tiklar")
+    public void kullaniciContactUsButonunaTiklar() {
+        mainPage.contactUsButonu.click();
+    }
+
+    @Then("kullanici GET IN TOUCH yazisini gorur")
+    public void kullaniciGETINTOUCHYazisiniGorur() {
+        Assert.assertTrue(mainPage.getInTouchText.isDisplayed());
+    }
+
+
+
+
 }
