@@ -32,6 +32,84 @@ public class MainPage {
     @FindBy(xpath = "//h2[.='Get In Touch']")
     public WebElement getInTouchText;
 
+    // US0007
+    @FindBy(xpath = "//a[.=' Test Cases']")
+    public WebElement testCaseButonu;
+
+    @FindBy(xpath = "//b[.='Test Cases']")
+    public WebElement testCasePageCorrect;
+
+    // US0008
+    @FindBy(xpath = "//a[text()=' Products']")
+    public WebElement productsButonu;
+
+    @FindBy(xpath = "//img[@id='sale_image']")
+    public WebElement productsPageCorrect;
+
+    @FindBy(xpath = "//h2[text()='All Products']")
+    public WebElement productsAllproductsList;
+
+    @FindBy(xpath = "(//a[text()='View Product'])[1]")
+    public WebElement viewProduct;
+
+    @FindBy(className = "product-information")
+    public WebElement productInformationPage;
+
+    @FindBy(xpath = "//h2[.='Blue Top']")
+    public WebElement productName;
+
+    @FindBy(xpath = "//p[.='Category: Women > Tops']")
+    public WebElement category;
+
+    @FindBy(xpath = "//span[.='Rs. 500']")
+    public WebElement price;
+
+    @FindBy(xpath = "//p[text()=' In Stock']")
+    public WebElement availability;
+
+    @FindBy(xpath = "//p[text()=' New']")
+    public WebElement condition;
+
+    @FindBy(xpath = "//p[text()=' Polo']")
+    public WebElement brand;
+
+    // US0009
+
+    @FindBy(xpath = "//input[@name='search']")
+    public WebElement searchProductElementi;
+
+    @FindBy(xpath = "//button[@id='submit_search']")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "//h2[.='Searched Products']")
+    public WebElement searchedProductText;
+
+    @FindBy(xpath = "//h2[.='Sleeveless Dress']")
+    public WebElement dressYazisi;
+
+    // US0010
+
+    @FindBy(xpath = "//h2[.='Subscription']")
+    public WebElement subscriptionText;
+
+    @FindBy(id = "susbscribe_email")
+    public WebElement emailAddress;
+
+    @FindBy(xpath = "//button[@id='subscribe']")
+    public WebElement okButonu;
+
+    @FindBy(xpath = "(//div[@class='alert-success alert'])[2]")
+    public WebElement successfullyText;
+
+
+
+
+
+
+
+
+
+
 
 
 
