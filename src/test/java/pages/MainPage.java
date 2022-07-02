@@ -98,7 +98,7 @@ public class MainPage {
     @FindBy(xpath = "//button[@id='subscribe']")
     public WebElement okButonu;
 
-    @FindBy(xpath = "(//div[@class='alert-success alert'])[2]")
+    @FindBy(xpath = "(//div[@class='alert-success alert'])[1]")
     public WebElement successfullyText;
 
 

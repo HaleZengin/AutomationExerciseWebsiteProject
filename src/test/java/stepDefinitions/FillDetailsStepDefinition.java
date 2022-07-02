@@ -82,14 +82,17 @@ public class FillDetailsStepDefinition {
     public void cikan_alert_te_ok_tusuna_basar() {
         Driver.getDriver().switchTo().alert().accept();
     }
+
     @Then("Success! Your details have been submitted successfully. yazisini gorur")
     public void success_your_details_have_been_submitted_successfully_yazisini_gorur() {
         Assert.assertTrue(fillDetailsPage.successText.isDisplayed());
     }
     @Then("kullanici Home butonuna basar")
     public void kullanici_home_butonuna_basar() {
+
         fillDetailsPage.home.click();
     }
+
     @Then("kullanici anasayfaya gittigini test eder")
     public void kullanici_anasayfaya_gittigini_test_eder() {
         Assert.assertEquals("https://www.automationexercise.com/",Driver.getDriver().getTitle() );

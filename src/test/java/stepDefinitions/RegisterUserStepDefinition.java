@@ -117,11 +117,13 @@ public class RegisterUserStepDefinition {
 
     @Then("kullanici Contact Us butonuna tiklar")
     public void kullaniciContactUsButonunaTiklar() {
+
         mainPage.contactUsButonu.click();
     }
 
     @Then("kullanici GET IN TOUCH yazisini gorur")
     public void kullaniciGETINTOUCHYazisiniGorur() {
+
         Assert.assertTrue(mainPage.getInTouchText.isDisplayed());
     }
 
