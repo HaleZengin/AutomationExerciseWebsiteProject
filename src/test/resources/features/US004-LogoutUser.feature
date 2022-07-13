@@ -1,6 +1,6 @@
 Feature: US004 Logout User
 
-  Scenario: TC01 Kayit sayfasi
+  Scenario: TC01 Ilk giris
     When kullanici tarayiciyi baslatir
     Then kullanici anasayfaya gider
     Then sayfanin gorunur oldugunu test eder
