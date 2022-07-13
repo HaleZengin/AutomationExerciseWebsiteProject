@@ -1,3 +1,4 @@
+@US0012
 Feature: US0012 Add Products in Cart
 
   Scenario: TC01

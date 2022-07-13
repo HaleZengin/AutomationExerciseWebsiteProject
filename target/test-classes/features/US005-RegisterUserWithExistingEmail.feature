@@ -1,6 +1,6 @@
 Feature: US005 Register User with existing email
 
-  Scenario: TC01 Kayit sayfasi
+  Scenario: TC01 Ana sayfa
     When kullanici tarayiciyi baslatir
     Then kullanici anasayfaya gider
     Then sayfanin gorunur oldugunu test eder

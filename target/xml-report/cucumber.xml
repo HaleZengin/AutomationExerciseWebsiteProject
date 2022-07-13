@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.305">
-    <testcase classname="US0010 Verify Subscription in home page" name="TC01 Subscription" time="0.089">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.329">
+    <testcase classname="US0012 Add Products in Cart" name="TC01" time="0.086">
+        <system-out>
             <![CDATA[When kullanici tarayiciyi baslatir..........................................passed
 Then kullanici anasayfaya gider.............................................passed
 Then sayfanin gorunur oldugunu test eder....................................passed
-Then kullanici sayfayi asagiya kaydirir.....................................undefined
-Then kullanici SUBSCRIPTION yazisinin gorunurlugunu dogrular................skipped
-And kullanici mail adresini girer ve ok dugmesine basar.....................skipped
-Then kullanici You have been successfully subscribed! yazisini dogrular.....skipped
+Then kullanici Products butonuna tiklar.....................................passed
+And kullanici sayfaya gittigini dogrular....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US0012 Add Products in Cart" name="TC02 Sepete urun ekleme" time="0.004">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[When kullanici ilk urunu sepete ekler.......................................undefined
+Then kullanici Continue Shopping butonuna tiklar............................skipped
+Then kullanici ikinci urunu sepete ekler....................................skipped
+Then kullanici View Cart butonuna tiklar....................................skipped
+Then kullanici sectigi iki urunun de sepette oldugunu dogrular..............skipped
+And kullanici fiyatini, toplam fiyatini ve urun miktaini dogrular...........skipped
 And kullanici sayfayi kapatir...............................................skipped
 ]]>
         </failure>

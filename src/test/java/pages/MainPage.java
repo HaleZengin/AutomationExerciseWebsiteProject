@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.security.cert.X509Certificate;
+
 public class MainPage {
 
     public MainPage(){
@@ -105,10 +107,43 @@ public class MainPage {
     @FindBy(xpath = "//a[.=' Cart']")
     public WebElement cartButonu;
 
+    //US0012
 
+    @FindBy(xpath = "(//a[@data-product-id='1'])[1]")
+    public WebElement addToCard1Urun;
 
+    @FindBy(xpath = "//button[@class='btn btn-success close-modal btn-block']")
+    public WebElement continueShoppingButonu;
 
+    @FindBy(xpath = "(//a[@data-product-id='2'])[1]")
+    public WebElement addToCard2Urun;
 
+    @FindBy(xpath = "//u[.='View Cart']")
+    public WebElement viewCard;
+
+    @FindBy(xpath = "//a[.='Blue Top']")
+    public WebElement birinciUrununSepettekiAdi;
+
+    @FindBy(xpath = "//a[.='Men Tshirt']")
+    public WebElement ikinciUrununSepettekiAdi;
+
+    @FindBy(xpath = "(//tbody/tr/td[3])[1]")
+    public WebElement birinciUrunSepetFiyati;
+
+    @FindBy(xpath = "(//tbody/tr/td[4])[1]")
+    public WebElement birinciUrununSepettekiMiktari;
+
+    @FindBy(xpath = "(//tbody/tr/td[5])[1]")
+    public WebElement birinciUrununSepettekiToplamFiyati;
+
+    @FindBy(xpath = "(//tbody/tr/td[3])[2]")
+    public WebElement ikincirunSepetFiyati;
+
+    @FindBy(xpath = "(//tbody/tr/td[4])[2]")
+    public WebElement ikinciUrununSepettekiMiktari;
+
+    @FindBy(xpath = "(//tbody/tr/td[5])[2]")
+    public WebElement ikinciUrununSepettekiToplamFiyati;
 
 
 

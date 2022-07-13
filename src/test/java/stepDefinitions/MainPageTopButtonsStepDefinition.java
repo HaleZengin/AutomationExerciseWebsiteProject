@@ -117,10 +117,55 @@ public class MainPageTopButtonsStepDefinition {
         mainPage.cartButonu.click();
     }
 
+    // US0012
+
+    @When("kullanici ilk urunu sepete ekler")
+    public void kullanici_ilk_urunu_sepete_ekler() {
+        mainPage.addToCard1Urun.click();
+    }
+    @Then("kullanici Continue Shopping butonuna tiklar")
+    public void kullanici_continue_shopping_butonuna_tiklar() {
+        mainPage.continueShoppingButonu.click();
+    }
+    @Then("kullanici ikinci urunu sepete ekler")
+    public void kullanici_ikinci_urunu_sepete_ekler() {
+        mainPage.addToCard2Urun.click();
+    }
+    @Then("kullanici View Cart butonuna tiklar")
+    public void kullanici_view_cart_butonuna_tiklar() {
+        mainPage.viewCard.click();
+    }
+    @Then("kullanici sectigi iki urunun de sepette oldugunu dogrular")
+    public void kullanici_sectigi_iki_urunun_de_sepette_oldugunu_dogrular() {
+        String birinciUrunSepette=mainPage.birinciUrununSepettekiAdi.getText();
+        String ikinciUrunSepette=mainPage.ikinciUrununSepettekiAdi.getText();
+        Assert.assertTrue(birinciUrunSepette.contains("Blue Top"));
+        Assert.assertTrue(ikinciUrunSepette.contains("Men Tshirt"));
+
+    }
+    @Then("kullanici fiyatini, toplam fiyatini ve urun miktaini dogrular")
+    public void kullanici_fiyatini_toplam_fiyatini_ve_urun_miktaini_dogrular() {
+        String price1=(mainPage.birinciUrunSepetFiyati.getText());
+        String quantity1=(mainPage.birinciUrununSepettekiMiktari.getText());
+        String total1=(mainPage.birinciUrununSepettekiToplamFiyati.getText());
+
+        String price2=(mainPage.ikincirunSepetFiyati.getText());
+        String quantity2=(mainPage.ikinciUrununSepettekiMiktari.getText());
+        String total2=(mainPage.ikinciUrununSepettekiToplamFiyati.getText());
+
+        Assert.assertTrue(price1.contains("Rs. 500"));
+        Assert.assertTrue(quantity1.contains("1"));
+        Assert.assertTrue(total1.contains("Rs. 500"));
+        Assert.assertTrue(price2.contains("Rs. 400"));
+        Assert.assertTrue(quantity2.contains("1"));
+        Assert.assertTrue(total2.contains("Rs. 400"));
+
+
+        System.out.println("Sepetteki urun fiyati, miktari ve toplam fiyeti dogru!");
 
 
 
-
+    }
 
 
 }
