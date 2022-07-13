@@ -1,7 +1,7 @@
 @US8
 Feature: US 0008 Verify All Products and product detail page
 
-  Scenario: TC01 Products Butonu
+  Scenario: TC01 Ana sayfa
     When kullanici tarayiciyi baslatir
     Then kullanici anasayfaya gider
     Then sayfanin gorunur oldugunu test eder

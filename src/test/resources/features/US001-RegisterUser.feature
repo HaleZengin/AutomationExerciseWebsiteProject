@@ -2,7 +2,7 @@
 Feature: US001 Register User
 
 
-  Scenario: TC01 ILK giris
+  Scenario: TC01 Ana sayfa
     When kullanici tarayiciyi baslatir
     Then kullanici anasayfaya gider
     Then sayfanin gorunur oldugunu test eder

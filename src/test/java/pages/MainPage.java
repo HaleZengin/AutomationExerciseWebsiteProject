@@ -101,6 +101,9 @@ public class MainPage {
     @FindBy(xpath = "(//div[@class='alert-success alert'])[1]")
     public WebElement successfullyText;
 
+    //US0011
+    @FindBy(xpath = "//a[.=' Cart']")
+    public WebElement cartButonu;
 
 
 

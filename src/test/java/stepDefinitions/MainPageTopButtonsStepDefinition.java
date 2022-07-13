@@ -111,6 +111,13 @@ public class MainPageTopButtonsStepDefinition {
     }
 
 
+    // US0011
+    @Then("kullanici Cart butonuna tiklar")
+    public void kullaniciCartButonunaTiklar() {
+        mainPage.cartButonu.click();
+    }
+
+
 
 
 
