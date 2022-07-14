@@ -159,6 +159,9 @@ public class MainPage {
     @FindBy(xpath = "//button[@type='button']")
     public WebElement addToCard;
 
+    @FindBy(xpath = "//tbody/tr/td[4]")
+    public WebElement sepetQuantity;
+
 
 
 

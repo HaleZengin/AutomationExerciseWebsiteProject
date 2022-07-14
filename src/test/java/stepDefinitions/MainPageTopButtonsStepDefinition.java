@@ -178,8 +178,7 @@ public class MainPageTopButtonsStepDefinition {
     }
     @Then("kullanici urun miktarini dorde cikarir")
     public void kullanici_urun_miktarini_dorde_cikarir() {
-        Select options = new Select(mainPage.urunQuantity);
-        options.selectByValue("1");
+        mainPage.urunQuantity.sendKeys(Keys.UP, Keys.UP, Keys.UP);
     }
     @Then("kullanici Add to Card butonuna basar")
     public void kullanici_add_to_card_butonuna_basar() {
@@ -187,7 +186,7 @@ public class MainPageTopButtonsStepDefinition {
     }
     @Then("kullanici urun miktarinin sectigi miktarla esit oldugunu test eder")
     public void kullanici_urun_miktarinin_sectigi_miktarla_esit_oldugunu_test_eder() {
-
+        Assert.assertTrue(mainPage.sepetQuantity.getText().contains("4"));
     }
 
 
