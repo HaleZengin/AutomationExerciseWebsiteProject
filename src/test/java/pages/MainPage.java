@@ -145,6 +145,21 @@ public class MainPage {
     @FindBy(xpath = "(//tbody/tr/td[5])[2]")
     public WebElement ikinciUrununSepettekiToplamFiyati;
 
+    // US0013
+
+    @FindBy(xpath = "(//a[.='View Product'])[3]")
+    public WebElement herhangibirUrununDetayi;
+
+    @FindBy(xpath = "//div[@class='view-product']")
+    public WebElement urunResmi;
+
+    @FindBy(xpath = "//input[@value='1']")
+    public WebElement urunQuantity;
+
+    @FindBy(xpath = "//button[@type='button']")
+    public WebElement addToCard;
+
+
 
 
 

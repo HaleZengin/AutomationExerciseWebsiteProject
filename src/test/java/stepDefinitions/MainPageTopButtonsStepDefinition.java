@@ -7,6 +7,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import pages.MainPage;
 import utilities.Driver;
 
@@ -145,13 +146,13 @@ public class MainPageTopButtonsStepDefinition {
     }
     @Then("kullanici fiyatini, toplam fiyatini ve urun miktaini dogrular")
     public void kullanici_fiyatini_toplam_fiyatini_ve_urun_miktaini_dogrular() {
-        String price1=(mainPage.birinciUrunSepetFiyati.getText());
-        String quantity1=(mainPage.birinciUrununSepettekiMiktari.getText());
-        String total1=(mainPage.birinciUrununSepettekiToplamFiyati.getText());
+        String price1 = (mainPage.birinciUrunSepetFiyati.getText());
+        String quantity1 = (mainPage.birinciUrununSepettekiMiktari.getText());
+        String total1 = (mainPage.birinciUrununSepettekiToplamFiyati.getText());
 
-        String price2=(mainPage.ikincirunSepetFiyati.getText());
-        String quantity2=(mainPage.ikinciUrununSepettekiMiktari.getText());
-        String total2=(mainPage.ikinciUrununSepettekiToplamFiyati.getText());
+        String price2 = (mainPage.ikincirunSepetFiyati.getText());
+        String quantity2 = (mainPage.ikinciUrununSepettekiMiktari.getText());
+        String total2 = (mainPage.ikinciUrununSepettekiToplamFiyati.getText());
 
         Assert.assertTrue(price1.contains("Rs. 500"));
         Assert.assertTrue(quantity1.contains("1"));
@@ -160,12 +161,40 @@ public class MainPageTopButtonsStepDefinition {
         Assert.assertTrue(quantity2.contains("1"));
         Assert.assertTrue(total2.contains("Rs. 400"));
 
+        System.out.println("Sepetteki urun fiyati, miktari ve toplam fiyati dogru!");
+    }
 
-        System.out.println("Sepetteki urun fiyati, miktari ve toplam fiyeti dogru!");
 
+    // US0013
 
+    @Then("kullanici ana sayfadan herhangi bir urunun View Product butonuna tiklar")
+    public void kullanici_ana_sayfadan_herhangi_bir_urunun_view_product_butonuna_tiklar() {
+        mainPage.herhangibirUrununDetayi.click();
+    }
+
+    @When("kullanici urun detay sayfasinin acildigini dogrular")
+    public void kullanici_urun_detay_sayfasinin_acildigini_dogrular() {
+        Assert.assertTrue(mainPage.urunResmi.isDisplayed());
+    }
+    @Then("kullanici urun miktarini dorde cikarir")
+    public void kullanici_urun_miktarini_dorde_cikarir() {
+        Select options = new Select(mainPage.urunQuantity);
+        options.selectByValue("1");
+    }
+    @Then("kullanici Add to Card butonuna basar")
+    public void kullanici_add_to_card_butonuna_basar() {
+        mainPage.addToCard.click();
+    }
+    @Then("kullanici urun miktarinin sectigi miktarla esit oldugunu test eder")
+    public void kullanici_urun_miktarinin_sectigi_miktarla_esit_oldugunu_test_eder() {
 
     }
+
+
+
+
+
+
 
 
 }
