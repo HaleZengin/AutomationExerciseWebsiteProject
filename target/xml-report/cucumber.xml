@@ -1,23 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.419">
-    <testcase classname="US0013 Verify Product quantity in Cart" name="TC01 Ana sayfa" time="0.106">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="0.371">
+    <testcase classname="US0014 Place Order: Register while Checkout" name="TC01 Ana sayfa" time="0.083">
+        <system-out>
             <![CDATA[When kullanici tarayiciyi baslatir..........................................passed
 Then kullanici anasayfaya gider.............................................passed
 Then sayfanin gorunur oldugunu test eder....................................passed
-Then kullanici ana sayfadan herhangi bir urunun View Product butonuna tiklar.undefined
+And kullanici sayfayi asagiya kaydirir......................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US0014 Place Order: Register while Checkout" name="TC02 Urunu sepete ekleme" time="0.001">
+        <system-out>
+            <![CDATA[Then kullanici ana sayfadan herhangi bir urunu sepete ekler.................passed
+Then kullanici View Cart butonuna tiklar....................................passed
+Then kullanici sectigi urunun sepette oldugunu dogrular.....................passed
+And kullanici Proceed To Checkout butonuna tiklar...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US0014 Place Order: Register while Checkout" name="TC03 Kayit olusturma" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[When kullanici Register  Login butonuna tiklar..............................undefined
+When kullanici isim ve mail adresini girer..................................skipped
+Then Singup butonuna tiklar.................................................skipped
+Then acilan sayfada ENTER ACCOUNT INFORMATION yazisinin gorunurlugunu test eder.skipped
+Then kullanici birinci bolum icin Email, Password, Date of birth kisimlarini doldurur.skipped
+Then kullanici Sign up for our newsletter! checkbox' ini secer..............skipped
+Then kullanici Receive special offers from our partners! checkbox' ini secer.skipped
+Then kullanici ikinci bolum icin gerekli kisimlari doldurur.................skipped
+Then kullnici Creat Account butonuna tiklar.................................skipped
+Then kullanici hesabin olustugunu dogrular..................................skipped
+Then kullanici Continue butonuna basar......................................skipped
+And kullanici sag ustteki kullanici adi ile giris yaptigini dogrular........skipped
 ]]>
         </failure>
     </testcase>
-    <testcase classname="US0013 Verify Product quantity in Cart" name="TC02 Sepetteki urun miktarini dogrulama" time="0.003">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[When kullanici urun detay sayfasinin acildigini dogrular....................undefined
-Then kullanici urun miktarini dorde cikarir.................................skipped
-Then kullanici Add to Card butonuna basar...................................skipped
-Then kullanici View Cart butonuna tiklar....................................skipped
-And kullanici urun miktarinin sectigi miktarla esit oldugunu test eder......skipped
-And kullanici sayfayi kapatir...............................................skipped
+    <testcase classname="US0014 Place Order: Register while Checkout" name="TC04 Siparis verme" time="0.002">
+        <system-out>
+            <![CDATA[When kullanici Cart butonuna tiklar.........................................passed
+Then kullanici Proceed To Checkout butonuna tiklar..........................passed
+Then kullanici adres bilgilerini ve siparisi dogrular.......................passed
+Then kullanici text kismina aciklama girer ve Place Order butonuna tiklar...passed
+Then kullanici odeme ayrintilarini doldurur.................................passed
+Then kullanici Pay and Confirm Order butonuna tiklar........................passed
+Then kullanici Your order has been placed successfully! yazisini gorur......passed
+Then kullanici Delete Account butonuna tiklar...............................passed
+And kullanici Account Deleted! yazisini gorur ve Continue butonuna tiklar...passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>

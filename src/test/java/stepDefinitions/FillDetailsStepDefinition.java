@@ -104,4 +104,12 @@ public class FillDetailsStepDefinition {
     public void saniyeBekler(int saniye) throws InterruptedException {
         Thread.sleep(saniye*1000);
     }
+
+
+
+
+
+
+
+
 }
