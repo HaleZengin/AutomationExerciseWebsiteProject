@@ -1,5 +1,4 @@
 
-@14
 Feature: US0014 Place Order: Register while Checkout
 
   Scenario: TC01 Ana sayfa

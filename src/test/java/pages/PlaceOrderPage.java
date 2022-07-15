@@ -17,7 +17,7 @@ public class PlaceOrderPage {
     @FindBy(xpath = "(//a[@data-product-id='8'])[1]")
     public WebElement addToCard;
 
-    @FindBy(xpath = "//a[.='View Cart']")
+    @FindBy(xpath = "//u[.='View Cart']")
     public WebElement viewCard;
 
     @FindBy(tagName = "(//h4)[2]")
