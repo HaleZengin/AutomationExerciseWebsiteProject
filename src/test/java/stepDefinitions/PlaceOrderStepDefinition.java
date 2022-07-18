@@ -108,5 +108,8 @@ public class PlaceOrderStepDefinition {
     }
 
 
+    @When("kullanici odeme detaylarini girer")
+    public void kullaniciOdemeDetaylariniGirer() {
 
+    }
 }
