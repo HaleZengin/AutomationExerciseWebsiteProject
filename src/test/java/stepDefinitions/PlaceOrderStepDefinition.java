@@ -4,9 +4,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 import pages.PlaceOrderPage;
-import utilities.Driver;
+
 
 public class PlaceOrderStepDefinition {
 
@@ -74,5 +73,40 @@ public class PlaceOrderStepDefinition {
         Assert.assertTrue(placeOrderPage.deleteAccount.isDisplayed());
         placeOrderPage.continueButonu.click();
     }
+
+
+    // US0015
+
+    @When("kullanici adi ile giris yapildigini dogrular")
+    public void kullanici_adi_ile_giris_yapildigini_dogrular() {
+        placeOrderPage.continueButonu.click();
+        Assert.assertTrue(placeOrderPage.girisYapildiginiDogrulama.isDisplayed());
+    }
+    @Then("kullanici sepete urun ekler")
+    public void kullanici_sepete_urun_ekler() {
+        placeOrderPage.sepeteurunEkleme.click();
+        placeOrderPage.viewCardButonu.click();
+    }
+    @Then("kullanici sepet sayfasinin gorunur oldugunu test eder")
+    public void kullanici_sepet_sayfasinin_gorunur_oldugunu_test_eder() {
+        Assert.assertTrue(placeOrderPage.sepetSayfasininGorunurlugu.isDisplayed());
+    }
+    @Then("kullanici odemeye devam et butonuna tiklar")
+    public void kullanici_odemeye_devam_et_butonuna_tiklar() {
+        placeOrderPage.proceedToChechoutButonu.click();
+    }
+    @Then("kullanici girilen adres bilgilerini ve siparisi dogrular")
+    public void kullanici_girilen_adres_bilgilerini_ve_siparisi_dogrular() {
+        Assert.assertTrue(placeOrderPage.country.getText().contains("Canada"));
+        Assert.assertTrue(placeOrderPage.sepettekiUrunn.getText().contains("Blue Top"));
+
+    }
+    @Then("kullanici text kismina bir aciklama girer ve place order butonuna tiklar")
+    public void kullanici_text_kismina_bir_aciklama_girer_ve_place_order_butonuna_tiklar() {
+        placeOrderPage.textKismi.sendKeys("alacaklarim");
+        placeOrderPage.placeOrder.click();
+    }
+
+
 
 }

@@ -17,7 +17,7 @@ public class PlaceOrderPage {
     @FindBy(xpath = "(//a[@data-product-id='8'])[1]")
     public WebElement addToCard;
 
-    @FindBy(xpath = "//u[.='View Cart']")
+    @FindBy(xpath = "//a[.='View Cart']")
     public WebElement viewCard;
 
     @FindBy(tagName = "(//h4)[2]")
@@ -64,6 +64,38 @@ public class PlaceOrderPage {
 
     @FindBy(xpath = "//a[@class='btn btn-primary']")
     public WebElement continueButonu;
+
+
+    // US0015
+
+    @FindBy(xpath = "//b[.='HAle']")
+    public WebElement girisYapildiginiDogrulama;
+
+    @FindBy(xpath = "(//a[@data-product-id='1'])[1]")
+    public WebElement sepeteurunEkleme;
+
+    @FindBy(xpath = "(//a[@href='/view_cart'])[2]")
+    public WebElement viewCardButonu;
+
+    @FindBy(xpath = "//li[.='Shopping Cart']")
+    public WebElement sepetSayfasininGorunurlugu;
+
+    @FindBy(xpath = "//a[@class='btn btn-default check_out']")
+    public WebElement proceedToChechoutButonu;
+
+    @FindBy(xpath = "(//li[@class='address_country_name'])[1]")
+    public WebElement country;
+
+    @FindBy(xpath = "//a[.='Blue Top']")
+    public WebElement sepettekiUrunn;
+
+    @FindBy(xpath = "//textarea[@class='form-control']")
+    public WebElement textKismi;
+
+    @FindBy(xpath = "//a[@class='btn btn-default check_out']")
+    public WebElement placeOrder;
+
+
 
 
 

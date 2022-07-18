@@ -37,8 +37,8 @@ public class RegisterUserStepDefinition {
 
     @When("kullanici isim ve mail adresini girer")
     public void kullaniciIsimVeMailAdresiniGirer() {
-        mainPage.nameBox.sendKeys("hale");
-        mainPage.emailBox.sendKeys("helee@gmail.com");
+        mainPage.nameBox.sendKeys("HAle");
+        mainPage.emailBox.sendKeys("hlmstfaa@gmail.com");
     }
 
     @Then("Singup butonuna tiklar")
