@@ -42,7 +42,7 @@ public class PlaceOrderPage {
     public WebElement nameOnCard;
 
     @FindBy(xpath = "//input[@name='card_number']")
-    public WebElement cardNummer;
+    public WebElement cardNumber;
 
     @FindBy(xpath = "//input[@name='cvc']")
     public WebElement cvc;
@@ -54,7 +54,7 @@ public class PlaceOrderPage {
     public WebElement year;
 
     @FindBy(xpath = "//button[@id='submit']")
-    public WebElement payandComfirm;
+    public WebElement payAndComfirm;
 
     @FindBy(xpath = "(//div[@class='alert-success alert'])[1]")
     public WebElement successText;
@@ -68,7 +68,7 @@ public class PlaceOrderPage {
 
     // US0015
 
-    @FindBy(xpath = "//b[.='HAle']")
+    @FindBy(xpath = "//b[.='HALE']")
     public WebElement girisYapildiginiDogrulama;
 
     @FindBy(xpath = "(//a[@data-product-id='1'])[1]")

@@ -50,8 +50,8 @@ public class PlaceOrderStepDefinition {
 
     @Then("kullanici odeme ayrintilarini doldurur")
     public void kullanici_odeme_ayrintilarini_doldurur() {
-        placeOrderPage.nameOnCard.sendKeys("Haleee");
-        placeOrderPage.cardNummer.sendKeys("123456789");
+        placeOrderPage.nameOnCard.sendKeys("Halee");
+        placeOrderPage.cardNumber.sendKeys("123456789");
         placeOrderPage.cvc.sendKeys("123");
         placeOrderPage.month.sendKeys("10");
         placeOrderPage.year.sendKeys("2024");
@@ -60,7 +60,7 @@ public class PlaceOrderStepDefinition {
 
     @Then("kullanici Pay and Confirm Order butonuna tiklar")
     public void kullanici_pay_and_confirm_order_butonuna_tiklar() {
-        placeOrderPage.payandComfirm.click();
+        placeOrderPage.payAndComfirm.click();
     }
 
     @Then("kullanici Your order has been placed successfully! yazisini gorur")
@@ -108,8 +108,5 @@ public class PlaceOrderStepDefinition {
     }
 
 
-    @When("kullanici odeme detaylarini girer")
-    public void kullaniciOdemeDetaylariniGirer() {
 
-    }
 }
