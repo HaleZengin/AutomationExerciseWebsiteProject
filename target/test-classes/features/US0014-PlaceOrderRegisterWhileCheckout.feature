@@ -14,7 +14,6 @@ Feature: US0014 Place Order: Register while Checkout
     Then kullanici sectigi urunun sepette oldugunu dogrular
     And  kullanici Proceed To Checkout butonuna tiklar
 
-
   Scenario: TC03 Kayit olusturma
     When kullanici Register  Login butonuna tiklar
     When kullanici isim ve mail adresini girer
