@@ -109,5 +109,10 @@ public class PlaceOrderStepDefinition {
     }
 
 
+    // US0016
 
+    @Then("kullanici {string} ve {string} girer ve Login butonuna tiklar")
+    public void kullaniciVeGirerVeLoginButonunaTiklar(String kayitliEmail, String kayitliPassword) {
+
+    }
 }

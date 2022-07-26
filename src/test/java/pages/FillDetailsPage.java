@@ -29,7 +29,7 @@ public class FillDetailsPage {
     @FindBy(id="years")
     public WebElement yearDropdown;
 
-    @FindBy(xpath = "//*[@id='newsletter']")
+    @FindBy(xpath = "//input[@id='newsletter']")
     public WebElement newsletterSignupBox;
 
     @FindBy(id="optin")

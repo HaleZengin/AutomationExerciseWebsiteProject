@@ -95,6 +95,13 @@ public class PlaceOrderPage {
     @FindBy(xpath = "//a[@class='btn btn-default check_out']")
     public WebElement placeOrder;
 
+    //US0016
+
+    @FindBy(xpath = "(//input[@name='email'])[1]")
+    public WebElement kayitliEmailBox;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement kayitliPasswordBox;
 
 
 
