@@ -103,6 +103,10 @@ public class PlaceOrderPage {
     @FindBy(xpath = "//input[@name='password']")
     public WebElement kayitliPasswordBox;
 
+    @FindBy(xpath = "//button[text()='Login']")
+    public WebElement login;
+
+
 
 
 

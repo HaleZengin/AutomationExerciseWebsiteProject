@@ -9,6 +9,7 @@ Feature: US0016 Place Order: Login before Checkout
 
   Scenario: TC03 Urunu sepete ekleme
     When kullanici sayfayi asagiya kaydirir
+    When kullanici sayfayi asagiya kaydirir
     Then kullanici sepete urun ekler
     Then kullanici sepet sayfasinin gorunur oldugunu test eder
     Then kullanici odemeye devam et butonuna tiklar
