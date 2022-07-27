@@ -11,7 +11,6 @@ import utilities.ConfigReader;
 public class PlaceOrderStepDefinition {
 
 
-
     PlaceOrderPage placeOrderPage = new PlaceOrderPage();
 
     // US0014
