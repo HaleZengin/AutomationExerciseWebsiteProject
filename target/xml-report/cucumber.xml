@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.906">
-    <testcase classname="US0014 Place Order: Register while Checkout" name="TC01 Ana sayfa" time="9.659">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="20.009">
+    <testcase classname="US0016 Place Order: Login before Checkout" name="TC01 Ana sayfa" time="19.693">
         <system-out>
             <![CDATA[When kullanici tarayiciyi baslatir..........................................passed
 Then kullanici anasayfaya gider.............................................passed
 Then sayfanin gorunur oldugunu test eder....................................passed
-And kullanici sayfayi asagiya kaydirir......................................passed
+Then kullanici SingUp-Login butonuna tiklar.................................passed
+Then kullanici "kayitliEmail" ve "kayitliPassword" girer ve Login butonuna tiklar.passed
 ]]>
         </system-out>
     </testcase>

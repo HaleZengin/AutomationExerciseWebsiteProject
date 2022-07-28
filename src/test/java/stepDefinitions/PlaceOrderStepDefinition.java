@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.PlaceOrderPage;
 import utilities.ConfigReader;
+import utilities.Driver;
 
 
 public class PlaceOrderStepDefinition {
@@ -111,10 +112,19 @@ public class PlaceOrderStepDefinition {
 
     // US0016
 
+    @Then("kullanici sepete bir urun ekler")
+    public void kullaniciSepeteBirUrunEkler() {
+        placeOrderPage.urunEkleme.click();
+        placeOrderPage.viewCard16.click();
+
+    }
+
     @Then("kullanici {string} ve {string} girer ve Login butonuna tiklar")
     public void kullaniciVeGirerVeLoginButonunaTiklar(String kayitliEmail, String kayitliPassword) {
         placeOrderPage.kayitliEmailBox.sendKeys(ConfigReader.getProperty("kayitliEmail"));
         placeOrderPage.kayitliPasswordBox.sendKeys(ConfigReader.getProperty("kayitliPassword"));
         placeOrderPage.login.click();
     }
+
+
 }

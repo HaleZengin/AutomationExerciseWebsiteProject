@@ -106,6 +106,14 @@ public class PlaceOrderPage {
     @FindBy(xpath = "//button[text()='Login']")
     public WebElement login;
 
+    @FindBy(xpath = "(//a[text()='Add to cart'])[3]")
+    public WebElement urunEkleme;
+
+    @FindBy(xpath = "//u[text()='View Cart']")
+    public WebElement viewCard16;
+
+
+
 
 
 }
